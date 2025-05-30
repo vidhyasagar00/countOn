@@ -1,4 +1,4 @@
-package com.example.countOn.ui.theme
+package com.example.countOn.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
