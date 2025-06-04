@@ -38,7 +38,9 @@ import com.example.countOn.presentation.screens.interval.IntervalScreen
 import com.example.countOn.presentation.screens.stopwatch.StopwatchScreen
 import com.example.countOn.presentation.screens.timer.TimerScreen
 import com.example.countOn.presentation.ui.theme.CountOnTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
