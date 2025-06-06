@@ -103,6 +103,7 @@ fun CountOnBottomNavigation(navController: NavController) {
                 modifier = Modifier
                     .clip(RoundedCornerShape(15.dp))
                     .clickable {
+                        if (selectedTab == index) return@clickable
                         selectedTab = index
                         navController.navigate(it.route) {
                             popUpTo(ScreenRoutes.HomeScreen)

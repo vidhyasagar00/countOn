@@ -20,8 +20,8 @@ data class Stopwatch(
             "%02d:%02d:%02d.%02d".format(*args.toTypedArray())
     }
 
-    fun increaseSec(): Stopwatch {
-        return fromMillis(toMillis() + 10L)
+    fun increaseSec(durationMillis: Long): Stopwatch {
+        return fromMillis(toMillis() + durationMillis)
     }
 
     fun difference(second: Stopwatch): Stopwatch {

@@ -45,9 +45,9 @@ class StopwatchViewmodel @Inject constructor(): ViewModel() {
     private suspend fun startTimer() {
         withContext(Dispatchers.IO) {
             while (state.value == StopwatchEvent.Running) {
-                delay(10)
+                delay(STOPWATCH_INCREASE_DURATION)
                 if (state.value != StopwatchEvent.Running) break
-                _timer.emit(timer.value.increaseSec())
+                _timer.emit(timer.value.increaseSec(STOPWATCH_INCREASE_DURATION))
             }
         }
     }
@@ -66,5 +66,9 @@ class StopwatchViewmodel @Inject constructor(): ViewModel() {
                 else -> Unit
             }
         }
+    }
+
+    companion object {
+        const val STOPWATCH_INCREASE_DURATION = 10L
     }
 }
